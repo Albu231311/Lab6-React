@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 6: React</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin: 0.5rem;
+    }
+
+
+
+.arriba{
+    width: 50px;
+    height: 10px;
+    background-color: #0ab9d8;
+}
+
+.abajo{
+    width: 50px;
+    position: relative;
+    height: 55px;
+    background-color: #daa813;
+    margin-top: 2px;
+    clip-path: polygon(
+    0% 0%,      
+    100% 0%,    
+    100% 75%,   
+    50% 100%,   
+    0% 75%      
+    );
+}
+
+.abajo1{
+    width: 40px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    height: 45px;
+    background-color: #f5d77f;
+    margin-top: 2px;
+    clip-path: polygon(
+    0% 0%,      
+    100% 0%,    
+    100% 75%,  
+    50% 100%,   
+    0% 75%      
+    );
+}
+
+.linea1{
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    background-color: #ffffff;
+    left: 26px;
+    top: 20px;
+}
+
+.linea2{
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    background-color: #ffffff;
+    left: 57px;
+    top: 20px;
+}
+
+.AFA{
+    position: absolute;
+    top: 19px;
+    left: 45px;
+    color: white;
+    font-size: 4px;
+}
+
+.letra1{
+    position: absolute;
+    width: 3px;
+    height: 27px;
+    background-color: #004a79;
+    left: 4px;
+    top: 4px;
+    border-bottom-right-radius: 20px;
+}
+
+.letra1-1{
+    position: absolute;
+    width: 3px;
+    height: 35px;
+    background-color: #004a79;
+    left: 18px;
+    top: 3px;
+    transform: rotate(58deg);
+}
+
+.letra2{
+    position: absolute;
+    width: 3px;
+    height: 33px;
+    background-color: #004a79;
+    left: 13px;
+    top: 4px;
+}
+
+.letra2-2{
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    background-color: #004a79;
+    left: 10px;
+    top: 4px;
+    clip-path: polygon(
+    0 0,        
+    100% 0,    
+    100% 100%,  
+    15% 90%,   
+    0 0%       
+  );
+}
+
+.letra2-2-2{
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    background-color: #004a79;
+    left: 19px;
+    top: 4px;
+}
+
+.letra3{
+    position: absolute;
+    width: 3px;
+    height: 33px;
+    background-color: #004a79;
+    left: 25px;
+    top: 4px;
+    clip-path: polygon(
+    0 0,        
+    100% 0,     
+    100% 85%,   
+    85% 93%,   
+    0 100%      
+  );
+}
+
+.letra3-3{
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background-color: #004a79;
+    left: 27px;
+    top: 4px;
+}
+
+.estrella {
+    width: 100px;
+    margin-top: 5px;
+    height: 100px;
+    background: #002244;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+  }
+
+
+.estrella1{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 12px;
+    left: 10px;
+    background: #ffffff;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+}
+
+.estrella2{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 22px;
+    left: 20px;
+    background: #002244;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+}
+
+.circulo {
+    width: 90px;
+    height: 90px;
+    background-color: #293951;
+    border-radius: 50%;
+  } 
+
+  .circulo2{
+    position: absolute;
+    top: 19px;
+    left: 21px;
+    width: 60px;
+    height: 60px;
+    background-color: #faffff; 
+    border-radius: 50%;
+  }
+
+  .circulo3{
+    position: absolute;
+    top: 24px;
+    left: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #2d98d1;
+    border-radius: 50%;
+  }
+
+.letra{
+    position: absolute;
+    top: -3px;
+    left: 8px;
+    font-size: 50px;
+    color: #faffff;
+    font-family: "Times New Roman", serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+
+.circuloH {
+    width: 90px;
+    height: 90px;
+    background-color: #082956;
+    border-radius: 50%;
+  }
+
+.circuloH1{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: #e6631f;
+    border-radius: 50%;
+}
+
+.circuloH2{
+    position: absolute;
+    left: 11.5px;
+    top: 12px;
+    width: 77px;
+    height: 77px;
+    background-color: #082956;
+    border-radius: 50%;
+}
+
+.circuloH3{
+    position: absolute;
+    left: 22px;
+    top: 22px;
+    width: 55px;
+    height: 55px;
+    background-color: #e6631f;
+    border-radius: 50%;
+}
+
+.circuloH4{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #082956;
+    border-radius: 50%;
+}
+
+.estrellaH5{
+    position: absolute;
+    left: 25px;
+    top: 26px;
+    width: 50px;
+    height: 50px;
+    background: #e6631f;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+}
+
+.letraH{
+    font-family: 'Graduate', serif;
+    position: absolute;
+    color: white;
+    top: 30px;
+    left: 35px;
+    font-size: 40px;
+}
+
+.dortmund{
+    width: 100px;
+    height: 100px;
+    background-color: #ffd900;
+    border-radius: 50%;
+    position: relative;
+  } 
+
+.dortmund1{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 95px;
+    height: 95px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.dortmund2{
+    position: absolute;
+    top: 4px;
+    left:4.2px;
+    width: 90px;
+    height: 90px;
+    background-color: #ffd900;
+    border-radius: 50%;
+}
+
+.B1{
+    position: absolute;
+    top: 25px;
+    left: 13px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.B2{
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.number{
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.V{
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    top: 0px;
+    left: 37px;
+    font-size: 40px;
+}
+
+.cuadro1{
+    background-color: #1e5cb3;
+    width: 70px;
+    height: 40px;
+    position: relative;
+}
+
+.cuadro2{
+    transform: rotate(45deg);
+    position: absolute;
+    background-color: #ffffff;
+    width: 25px;
+    height: 25px;
+    left: 23px;
+    top: 8px;
+}
+
+.cuadro3{
+    transform: rotate(45deg);
+    position: absolute;
+    background-color: #231f20;
+    width: 15px;
+    height: 15px;
+    left: 28px;
+    top: 13px;
+}
+
+.cuadro4{
+    transform: rotate(45deg);
+    position: absolute;
+    background-color: #ffffff;
+    width: 5px;
+    height: 5px;
+    left: 33px;
+    top: 18px;
+}
+
+.ovalo1{
+    width: 100px;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ovalo2{
+    width: 85px;
+    height: 55px;
+    background-color: #b3995d;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 2px;
+}
+
+.ovalo3{
+    width: 75px;
+    height: 50px;
+    background-color: #aa0000;
+    border-radius: 50%;
+    position: absolute;
+    left: 12px;
+    top: 5px;
+}
+
+.letras{
+    position: absolute;
+    left: 35px;
+    top: 2px;
+    font-size: 40px;
+    color: #ffffff;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.letraf{
+    position: absolute;
+    left: 43px;
+    color: #ffffff;
+    top: 17px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.pistons1{
+    width: 100px;
+    height: 100px;
+    background-color: #c7c2c4;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pistons2{
+    width: 95px;
+    height: 95px;
+    background-color: #0463c3;
+    border-radius: 50%;
+    position: absolute;
+    left: 2.5px;
+    top: 2.5px;
+}
+
+.pistons3{
+    width: 75px;
+    height: 75px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 13px;
+    top: 13px;
+}
+
+.pistons4{
+    width: 70px;
+    height: 70px;
+    background-color: #ff0839;
+    border-radius: 50%;
+    position: absolute;
+    left: 15.5px;
+    top: 16px;
+}
+
+.pistons5{
+    width: 72px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 26px;
+}
+
+.pistons6{
+    width: 70px;
+    height: 45px;
+    background-color: #ff0839;
+    border-radius: 50%;
+    position: absolute;
+    left: 16px;
+    top: 29px;
+}
+
+.pistons7{
+    width: 7px;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+    left: 0px;
+    top: 22px;
+}
+
+.pistons8{
+    width: 7px;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+    left: 63px;
+    top: 19px;
+}
+
+.pistons9{
+    color: #ffffff;
+    font-size: 10px;
+    position: absolute;
+    left: 14px;
+    top: 14px;
+}
+
+.pistons10{
+    color: #ffffff;
+    font-size: 10px;
+    position: absolute;
+    left: 14px;
+    top: 24px;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: rgb(62, 167, 199);
+  font-family: "Times New Roman", serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  margin-top: 1rem;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.card-animation {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+.card.flipped .card-animation {
+    transform: rotateY(180deg) scale(1.05);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+  background-color: #607d8b;
+  color: white;
+}
+
+.card-back {
+  background-color: #fff3e0;
+  transform: rotateY(180deg);
+}
+
+  </style>
+</head>
+<body>
+    <h1>Juego de Memoria</h1>
+    <div id="moves">Movimientos: 0</div>
+    <div id="game"></div>
+    <div id="message" class="message"></div>
+  
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      const { useState, useEffect } = React;
+  
+      function mezclarCartas(array) {
+        let copia = [...array];
+        for (let i = copia.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copia[i], copia[j]] = [copia[j], copia[i]];
+        }
+        return copia;
+      }
+  
+      function JuegoMemoria() {
+        const cartasOriginales = [
+          { id: 1, html: '<div><div class="arriba"><div class="linea1"></div><div class="linea2"></div><div class="AFA"> A F A</div></div><div class="abajo"><div class="abajo1"><div class="letra1"></div><div class="letra1-1"></div><div class="letra2"></div><div class="letra2-2"></div><div class="letra2-2-2"></div><div class="letra3"></div><div class="letra3-3"></div></div></div></div>' },
+          { id: 2, html: '<div class="estrella"><div class="estrella1"></div><div class="estrella2"></div></div>' },
+          { id: 3, html: '<div class="circulo"><div class="circulo2"></div><div class="circulo3"><div class="letra">N</div></div></div>' },
+          { id: 4, html: '<div class="circuloH"><div class="circuloH1"></div><div class="circuloH2"></div><div class="circuloH3"></div><div class="circuloH4"></div><div class="estrellaH5"></div><div class="letraH">H</div></div>' },
+          { id: 5, html: '<div class="dortmund"><div class="dortmund1"></div><div class="dortmund2"></div><div class="B1">B</div><div class="B2">B</div><div class="V">V</div><div class="number">09</div></div>' },
+          { id: 6, html: '<div class="cuadro1"><div class="cuadro2"></div><div class="cuadro3"></div><div class="cuadro4"></div></div>' },
+          { id: 7, html: '<div class="ovalo1"><div class="ovalo2"></div><div class="ovalo3"></div><div class="letras">S</div><div class="letraf">F</div></div>' },
+          { id: 8, html: '<div class="pistons1"><div class="pistons2"></div><div class="pistons3"></div><div class="pistons4"></div><div class="pistons5"></div><div class="pistons6"><div class="pistons7"></div><div class="pistons8"></div><div class="pistons9">DETROIT</div><div class="pistons10">PISTONS</div></div></div>' }
+        ];
+  
+        const [mazo, setMazo] = useState([]);
+        const [seleccionadas, setSeleccionadas] = useState([]);
+        const [acertadas, setAcertadas] = useState([]);
+        const [contadorMovs, setContadorMovs] = useState(0);
+        const [esperando, setEsperando] = useState(false);
+  
+        useEffect(() => {
+          let cartasDoble = mezclarCartas([...cartasOriginales, ...cartasOriginales]);
+          cartasDoble = cartasDoble.map((carta, index) => ({
+            id: index,
+            valor: carta,
+            volteada: false
+          }));
+          setMazo(cartasDoble);
+        }, []);
+  
+        useEffect(() => {
+          document.getElementById("moves").textContent = `Movimientos: ${contadorMovs}`;
+          if (acertadas.length === 16) {
+            document.getElementById("message").textContent = "Felicidades, terminaste el juego 🐐🐐";
+          }
+        }, [contadorMovs, acertadas]);
+  
+        const manejarClick = (indice) => {
+          if (esperando || mazo[indice].volteada || seleccionadas.length === 2) return;
+  
+          const nuevoMazo = [...mazo];
+          nuevoMazo[indice].volteada = true;
+          setMazo(nuevoMazo);
+  
+          const nuevasSeleccionadas = [...seleccionadas, indice];
+          setSeleccionadas(nuevasSeleccionadas);
+  
+          if (nuevasSeleccionadas.length === 2) {
+            setEsperando(true);
+            setContadorMovs(contadorMovs + 1);
+  
+            const [primero, segundo] = nuevasSeleccionadas;
+  
+            if (nuevoMazo[primero].valor.id === nuevoMazo[segundo].valor.id) {
+              setAcertadas([...acertadas, primero, segundo]);
+              setSeleccionadas([]);
+              setEsperando(false);
+            } else {
+              setTimeout(() => {
+                nuevoMazo[primero].volteada = false;
+                nuevoMazo[segundo].volteada = false;
+                setMazo(nuevoMazo);
+                setSeleccionadas([]);
+                setEsperando(false);
+              }, 900);
+            }
+          }
+        };
+  
+        return (
+          React.createElement("div", { className: "grid" },
+            mazo.map((carta, i) => (
+              React.createElement("div", {
+                key: carta.id,
+                className: `card ${carta.volteada ? 'flipped' : ''}`,
+                onClick: () => manejarClick(i)
+              },
+                React.createElement("div", { className: "card-animation" },
+                  React.createElement("div", { className: "card-front" }, ""),
+                  React.createElement("div", {
+                    className: "card-back",
+                    dangerouslySetInnerHTML: { __html: carta.valor.html }
+                  })
+                )
+              )
+            ))
+        ));
+      }
+  
+      ReactDOM.createRoot(document.getElementById("game")).render(React.createElement(JuegoMemoria));
+    </script>
+  </body>
+  
+  
+</html>
