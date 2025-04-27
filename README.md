@@ -38,8 +38,7 @@
 ## 📂 Tecnologías utilizadas
 
 - **HTML** básico
-- **React** (añadido manualmente vía CDN)
-- **Babel** (añadido manualmente vía CDN para JSX)
+- **React**
 - **CSS Grid** para diseño del tablero
 - **Animaciones** con CSS para el efecto de flip
 
